@@ -1,0 +1,17 @@
+# Production values — DO NOT commit secrets
+project_id     = "your-gcp-project-id"
+project_prefix = "suidex"
+region         = "us-east4"
+
+node_zones = [
+  "us-east4-a",
+  "us-east4-b",
+  "us-east4-c",
+]
+
+master_authorized_cidrs = [
+  {
+    cidr         = "0.0.0.0/0"
+    display_name = "All (restrict in production)"
+  },
+]
